@@ -78,7 +78,7 @@ module.exports = class MFDCPDF {
 	* @param {string} as The output type requested, can be 'file', 'buffer' or 'stream'
 	*/
 	as(as) {
-		this.as = as;
+		this._as = as;
 		return this;
 	};
 	// }}}

@@ -33,7 +33,7 @@ app.get('/api/generate-pdf', (req, res) => {
 		.templatePath('./test/data/simple.html')
 		.data({title: 'Hello World'}) // Shorted version of the above
 		.asStream()
-		.then(steam => stream.pipe(res)) // Pipe PDF into Express response
+		.then(stream => stream.pipe(res)) // Pipe PDF into Express response
 })
 ```
 
