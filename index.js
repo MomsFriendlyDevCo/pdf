@@ -178,7 +178,7 @@ module.exports = class MFDCPDF {
 	* @param {object} [data] Optional data to use when compiling the template - calls `data()` internally if specified
 	* @returns {Promise<Stream>} A promise which will return the compiled PDF as a Steam.Readable
 	*/
-	asSteam(data) {
+	asStream(data) {
 		return this.as('stream').generate(data);
 	}
 	// }}}
