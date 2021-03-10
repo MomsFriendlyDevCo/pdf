@@ -79,6 +79,12 @@ Returns the chainable class instance.
 ```
 
 
+fix(fix, status)
+----------------
+Toggle the application of various fixes.
+Accepts the fix name and the enabled status or an object of {key: Boolean}
+
+
 generate(data) / asBuffer(data) / asFile(data) / asStream(data)
 ---------------------------------------------------------------
 Convenience functions to set the output type + run `generate()` + return a promise.

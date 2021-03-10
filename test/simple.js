@@ -22,6 +22,7 @@ describe('Simple tests', ()=> {
 					],
 				},
 			})
+			.fix('firstPage')
 			.asFile()
 			.then(path => new Promise((resolve, reject) => { // Wrap the horrible pdf-extract parser into a promise
 				mlog.log('PDF file available at', path);

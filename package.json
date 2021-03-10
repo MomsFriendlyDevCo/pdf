@@ -1,6 +1,6 @@
 {
   "name": "@momsfriendlydevco/pdf",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Generate dynamic PDFs using Vue templates and Prince",
   "main": "index.js",
   "scripts": {

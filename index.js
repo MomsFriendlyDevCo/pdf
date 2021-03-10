@@ -76,6 +76,7 @@ module.exports = class MFDCPDF {
 	/**
 	* Setter for output type
 	* @param {string} as The output type requested, can be 'file', 'buffer' or 'stream'
+	* @returns {MFDCPDF} This chainable instance
 	*/
 	as(as) {
 		this._as = as;
@@ -85,10 +86,32 @@ module.exports = class MFDCPDF {
 
 	// Fixes {{{
 	/**
-	* Indicate that we should add a dummy first page (+ remove it after we generated the PDF) to fix the initial-page render issue
-	* @type {boolean}
+	* List of fixes to apply
+	* @type {Object}
+	* @property {boolean} firstPage Indicate that we should add a dummy first page (+ remove it after we generated the PDF) to fix the initial-page render issue
 	*/
-	_fixFirstPage = true;
+	_fixes = {
+		firstPage: true,
+	};
+
+
+	/**
+	* Set status of a fix or fixes
+	* @param {string|Object} key Either the single fix to set the status of or an object to merge
+	* @param {boolean} [status=true] If key is a single string name this specifies its status
+	* @returns {MFDCPDF} This chainable instance
+	*/
+	fix(fix, status) {
+		if (typeof fix == 'object') {
+			this._fixes = {
+				...this._fixes,
+				...fix,
+			};
+		} else {
+			this._fixes[fix] = status ?? true;
+		}
+		return this;
+	};
 	// }}}
 
 	// generate() {{{
