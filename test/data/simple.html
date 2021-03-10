@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title>Simple PDF output example</title>
+	</head>
+	<body>
+		<h1>{{title}}</h1>
+		<p>
+			Dear
+			<a :href="`mailto:${customer.email}`">{{customer.name}}</a>
+		</p>
+		<p>
+			I would like to say hello to yourself
+			<span v-if="customer.pets && customer.pets.length > 0">
+				and your wonderful pets:
+				<ol>
+					<li v-for="pet in customer.pets">
+						{{pet.name}} the {{pet.type}}
+					</li>
+				</ol>
+			</span>
+		</p>
+		<p>{{signoff}}</p>
+	</body>
+</html>
