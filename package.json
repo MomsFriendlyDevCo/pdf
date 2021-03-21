@@ -1,6 +1,6 @@
 {
   "name": "@momsfriendlydevco/pdf",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Generate dynamic PDFs using Vue templates and Prince",
   "main": "index.js",
   "scripts": {
@@ -25,12 +25,12 @@
     "node": ">=14.8.0"
   },
   "devDependencies": {
-    "chai": "^4.3.3",
-    "mocha": "^8.3.1",
+    "chai": "^4.3.4",
+    "mocha": "^8.3.2",
     "mocha-logger": "^1.0.7"
   },
   "dependencies": {
-    "@momsfriendlydevco/vue-template": "^0.0.3",
+    "@momsfriendlydevco/vue-template": "^0.0.4",
     "cheerio": "^1.0.0-rc.5",
     "node-pdftk": "^2.1.3",
     "pdf-extract": "^1.0.11",

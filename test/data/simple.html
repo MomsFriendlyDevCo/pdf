@@ -1,12 +1,17 @@
 <html>
 	<head>
 		<title>Simple PDF output example</title>
+		<style>
+		.email .email-person {
+			color: blue;
+		}
+		</style>
 	</head>
-	<body>
+	<body class="email">
 		<h1>{{title}}</h1>
 		<p>
 			Dear
-			<a :href="`mailto:${customer.email}`">{{customer.name}}</a>
+			<a :href="`mailto:${customer.email}`" class="email-person">{{customer.name}}</a>
 		</p>
 		<p>
 			I would like to say hello to yourself
